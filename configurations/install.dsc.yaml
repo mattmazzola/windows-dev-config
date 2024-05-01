@@ -2,6 +2,7 @@
 
 properties:
   configurationVersion: 0.2.0
+
   assertions:
     - resource: Microsoft.Windows.Developer/OsVersion
       directives:
@@ -9,6 +10,7 @@ properties:
         allowPrerelease: true
       settings:
         MinVersion: "10.0.22000"
+
   resources:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
@@ -17,6 +19,7 @@ properties:
       settings:
         id: Git.Git
         source: winget
+
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         description: Install Visual Studio Code
@@ -24,6 +27,7 @@ properties:
       settings:
         id: Microsoft.VisualStudioCode
         source: winget
+
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         description: Install Windows Terminal
@@ -31,6 +35,7 @@ properties:
       settings:
         id: Microsoft.WindowsTerminal
         source: winget
+
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         description: Install Docker Desktop
