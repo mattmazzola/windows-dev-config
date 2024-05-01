@@ -38,3 +38,19 @@ properties:
       settings:
         id: Docker.DockerDesktop
         source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install GitHub CLI
+        allowPrerelease: true
+      settings:
+        id: GitHub.cli
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Open Broadcaster Software (OBS)
+        allowPrerelease: true
+      settings:
+        id: OBSProject.OBSStudio
+        source: winget
