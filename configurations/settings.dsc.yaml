@@ -12,9 +12,9 @@ properties:
     - resource: Microsoft.Windows.Developer/ShowSecondsInClock
       directives:
         description: Show seconds in clock
-        allowPrerelease: false
+        allowPrerelease: true
       settings:
-        Ensure: Present
+        Ensure: Absent
     - resource: Microsoft.Windows.Developer/HideFileExtensions
       directives:
         description: Hide file extensions
