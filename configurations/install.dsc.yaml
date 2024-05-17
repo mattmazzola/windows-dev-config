@@ -54,6 +54,14 @@ properties:
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
+        description: Install FFMpeg
+        allowPrerelease: true
+      settings:
+        id: Gyan.FFmpeg
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
         description: Install Open Broadcaster Software (OBS)
         allowPrerelease: true
       settings:
