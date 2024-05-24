@@ -3,6 +3,14 @@
 properties:
   configurationVersion: 0.2.0
   resources:
+    - resource: Microsoft.Windows.Developer/EnableDeveloperMode
+      directives:
+        description: Enable developer mode
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+        RestartExplorer: true
+
     - resource: Microsoft.Windows.Developer/TaskBarAlignment
       directives:
         description: Set taskbar alignment to Middle
