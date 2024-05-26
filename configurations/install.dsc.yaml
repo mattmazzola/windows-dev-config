@@ -78,6 +78,14 @@ properties:
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
+        description: Install Azure CLI
+        allowPrerelease: true
+      settings:
+        id: Azure.cli
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
         description: Install GitHub CLI
         allowPrerelease: true
       settings:
