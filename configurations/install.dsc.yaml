@@ -49,7 +49,7 @@ properties:
         description: Install Windows Terminal
         allowPrerelease: true
       settings:
-        id: Microsoft.WindowsTerminal
+        id: Microsoft.WindowsTerminalZ
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage

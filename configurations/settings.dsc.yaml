@@ -18,7 +18,7 @@ properties:
       settings:
         Alignment: "Middle"
 
-    - resource: Microsoft.Windows.Developer/ShowSecondsInClock
+    - resource: Microsoft.Windows.Developer/ShowSecondsInClockZ
       directives:
         description: Show seconds in clock
         allowPrerelease: true
