@@ -1,0 +1,32 @@
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate:
+    name: Validate WinGet Configurations
+    runs-on: windows-latest
+    steps:
+      - name: Install winget
+        uses: Cyberboss/install-winget@v1
+        id: stepid
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print winget Version
+        run: echo '${{ steps.stepid.outputs.winget-version }}'
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate settings
+        run: winget configuration validate -f .\configurations\settings.dsc.yaml
+
+      - name: Validate install
+        run: winget configuration validate -f .\configurations\install.dsc.yaml
