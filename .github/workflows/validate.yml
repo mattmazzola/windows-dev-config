@@ -15,12 +15,8 @@ jobs:
     steps:
       - name: Install winget
         uses: Cyberboss/install-winget@v1
-        id: stepid
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Print winget Version
-        run: echo '${{ steps.stepid.outputs.winget-version }}'
 
       - name: Checkout
         uses: actions/checkout@v4
