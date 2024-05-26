@@ -27,7 +27,7 @@ properties:
 
     - resource: Microsoft.Windows.Developer/HideFileExtensions
       directives:
-        description: Hide file extensions
+        description: Show file extensions
         allowPrerelease: true
       settings:
         Ensure: Present
