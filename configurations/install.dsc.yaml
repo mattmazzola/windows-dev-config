@@ -81,7 +81,7 @@ properties:
         description: Install Azure CLI
         allowPrerelease: true
       settings:
-        id: Azure.cli
+        id: Microsoft.AzureCLI
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage

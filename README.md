@@ -4,9 +4,11 @@
 
 ```powershell
 winget configuration show -f .\configurations\settings.dsc.yaml
-winget configuration validate -f .\configurations\settings.dsc.yaml
-
 winget configuration show -f .\configurations\install.dsc.yaml
+```
+
+```powershell
+winget configuration validate -f .\configurations\settings.dsc.yaml
 winget configuration validate -f .\configurations\install.dsc.yaml
 ```
 
