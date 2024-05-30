@@ -28,10 +28,9 @@ jobs:
         run: |
           $settingsPath = $(winget --info | Select-String -Pattern "%LOCALAPPDATA%\\Packages\\Microsoft.DesktopAppInstaller_[\w]*\\LocalState\\s" | ForEach-Object { $_.Matches.Value -replace '\\s', '\settings.json' })
           $expandedSettingsPath = [System.Environment]::ExpandEnvironmentVariables($settingsPath)
-          echo "Settings path: $expandedSettingsPath"
           $settingsContent = Get-Content "./settings.json"
           echo "Settings content: $settingsContent"
-          echo "Writing settings to $expandedSettingsPath"
+          echo "Writing settings to: $expandedSettingsPath"
           $settingsContent | Set-Content $expandedSettingsPath
 
       - name: Validate settings
