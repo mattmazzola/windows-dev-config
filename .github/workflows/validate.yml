@@ -31,7 +31,7 @@ jobs:
           echo "Settings path: $expandedSettingsPath"
           $settingsContent = Get-Content "./settings.json"
           echo "Settings content: $settingsContent"
-          ehco "Writing settings to $expandedSettingsPath"
+          echo "Writing settings to $expandedSettingsPath"
           $settingsContent | Set-Content $expandedSettingsPath
 
       - name: Validate settings
