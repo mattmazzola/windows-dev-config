@@ -24,6 +24,13 @@ jobs:
       - name: Winget Info
         run: winget --info
 
+      - name: Create settings file
+        run: |
+          $settingsPath = $(winget --info | Select-String -Pattern "%LOCALAPPDATA%\\Packages\\Microsoft.DesktopAppInstaller_[\w]*\\LocalState\\s" | ForEach-Object { $_.Matches.Value -replace '\\s', '\settings.json' })
+          $expandedSettingsPath = [System.Environment]::ExpandEnvironmentVariables($settingsPath)
+          $settingsContent = Get-Content "./settings.json"
+          $settingsContent | Set-Content $expandedSettingsPath
+
       - name: Validate settings
         run: winget configuration validate -f .\configurations\settings.dsc.yaml
 
