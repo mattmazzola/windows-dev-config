@@ -26,7 +26,7 @@ jobs:
 
       - name: Create settings file
         run: |
-          $settingsPath = $(winget --info | Select-String -Pattern "%LOCALAPPDATA%\\Packages\\Microsoft.DesktopAppInstaller_[\w]*\\LocalState\\s" | ForEach-Object { $_.Matches.Value -replace '\\s', '\settings.json' })
+          $settingsPath = $(winget --info | Select-String -Pattern "%LOCALAPPDATA%\\Packages\\Microsoft\.DesktopAppInstaller_[\w]*\\LocalState\\s" | ForEach-Object { $_.Matches.Value -replace '\\s', '\settings.json' })
           $expandedSettingsPath = [System.Environment]::ExpandEnvironmentVariables($settingsPath)
           $settingsContent = Get-Content "./settings.json"
           echo "Local settings content: $settingsContent"
