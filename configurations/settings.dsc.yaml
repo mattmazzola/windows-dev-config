@@ -3,57 +3,32 @@
 properties:
   configurationVersion: 0.2.0
   resources:
-    - resource: Microsoft.Windows.Developer/EnableDeveloperMode
+    - resource: Microsoft.Windows.Developer/Taskbar
       directives:
-        description: Enable developer mode
+        description: Modify taskbar settings
         allowPrerelease: true
       settings:
-        Ensure: Present
-        RestartExplorer: true
-
-    - resource: Microsoft.Windows.Developer/TaskBarAlignment
+        Alignment: Left # [KeepCurrentValue, Middle]
+        HideLabelsMode: Never # [KeepCurrentValue, WhenFull, Always]
+        SearchBoxMode: ShowIconAndLabel # [KeepCurrentValue, ShowIconOnly, SearchBox, Hide]
+        TaskViewButton: Show # [KeepCurrentValue, Hide]
+        WidgetsButton: Show # [KeepCurrentValue, Hide]
+        RestartExplorer: True
+    - resource: Microsoft.Windows.Developer/WindowsExplorer
       directives:
-        description: Set taskbar alignment to Middle
+        description: Modify Windows Explorer settings
         allowPrerelease: true
       settings:
-        Alignment: "Middle"
-
+        FileExtensions: Hide # [KeepCurrentValue, Hide]
+        HiddenFiles: Hide # [KeepCurrentValue, Hide]
+        ItemCheckBoxes: Hide # [KeepCurrentValue, Hide]
+        RestartExplorer: True
     - resource: Microsoft.Windows.Developer/ShowSecondsInClock
       directives:
         description: Show seconds in clock
         allowPrerelease: true
       settings:
-        Ensure: Absent
-
-    - resource: Microsoft.Windows.Developer/HideFileExtensions
-      directives:
-        description: Show file extensions
-        allowPrerelease: true
-      settings:
         Ensure: Present
-
-    - resource: Microsoft.Windows.Developer/ShowTaskViewButton
-      directives:
-        description: Show task view button
-        allowPrerelease: true
-      settings:
-        Ensure: Present
-
-    - resource: Microsoft.Windows.Developer/ShowHiddenFiles
-      directives:
-        description: Show hidden files
-        allowPrerelease: true
-      settings:
-        Ensure: Present
-
-    - resource: Microsoft.Windows.Developer/HideTaskBarLabels
-      directives:
-        description: Never hide task bar labels
-        allowPrerelease: true
-      settings:
-        HideLabels: Never # 'WhenFull', 'Always'
-        RestartExplorer: true
-
     - resource: Microsoft.Windows.Developer/EnableDarkMode
       directives:
         description: Enable dark mode
