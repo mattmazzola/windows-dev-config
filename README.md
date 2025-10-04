@@ -16,9 +16,12 @@ winget configuration validate -f .\configurations\install.dsc.yaml
 
 ```powershell
 winget configuration -f .\configurations\settings.dsc.yaml
-
 winget configuration -f .\configurations\install.dsc.yaml
 ```
+
+## Manual Setup
+
+See [MANUAL.md](MANUAL.md)
 
 ## Links
 
