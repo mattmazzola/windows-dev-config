@@ -30,14 +30,6 @@ properties:
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Miniconda
-        allowPrerelease: true
-      settings:
-        id: Anaconda.Miniconda3
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
         description: Install Visual Studio Code
         allowPrerelease: true
       settings:
