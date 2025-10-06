@@ -8,11 +8,18 @@
 
 > Restart to complete
 
+### WSL
+
 - Install wsl
+    - Ensure version 2 is set (Should be latest by default)
 - Install wsl Distribution
     ```pwsh
     wsl --install Ubuntu-22.04
     ```
+
+### Other
+
+- Open application "Phone Link" to initialize installation
 
 ## Configuration
 
@@ -29,6 +36,8 @@
     - Never hide task bar labels
 - Enable Dev Home
 - Create Dev Drive (100 GB+)
+- Enable Clipboard History
+    - Enable history sync across devices
 
 ## Installation
 
@@ -42,9 +51,12 @@ winget install GitHub.cli
 winget install OBSProject.OBSStudio
 winget install NickeManarin.ScreenToGif
 winget install Microsoft.PowerToys
+winget install Logseq.Logseq
 ```
 
 ## More Configuration
+
+These steps require installation of some applications above
 
 - Configure Terminal Settings
     - Set start directory to Dev Drive
@@ -55,13 +67,7 @@ winget install Microsoft.PowerToys
     - Update VSCode use settings to use font: `"terminal.integrated.fontFamily": "MesloLGM Nerd Font"`
     - [Update $PROFILE to se oh-my-posh prompt](https://ohmyposh.dev/docs/installation/prompt)
 
+## Optional (SSH setup)
 
+## Setup LogSeq
 
-
-
-
-
-
-Processor	Intel(R) Xeon(R) W-3245 CPU @ 3.20GHz, 3192 Mhz, 16 Core(s), 32 Logical Processor(s)
-Installed Physical Memory (RAM)	256 GB
-Adapter Description	NVIDIA Quadro RTX 4000
