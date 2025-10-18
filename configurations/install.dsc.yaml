@@ -28,7 +28,6 @@ properties:
         id: Microsoft.DotNet.SDK.8
         source: winget
 
-
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         description: Install Visual Studio Code
@@ -52,14 +51,6 @@ properties:
       settings:
         id: JanDeDobbeleer.OhMyPosh
         source: winget
-
-    # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   directives:
-    #     description: Install Miniconda
-    #     allowPrerelease: true
-    #   settings:
-    #     id: Anaconda.Miniconda3
-    #     source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
@@ -123,4 +114,12 @@ properties:
         allowPrerelease: true
       settings:
         id: Microsoft.PowerToys
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Azure Storage Explorer
+        allowPrerelease: true
+      settings:
+        id: Microsoft.Azure.StorageExplorer
         source: winget

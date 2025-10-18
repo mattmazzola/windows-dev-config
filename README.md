@@ -19,6 +19,10 @@ winget configuration -f .\configurations\settings.dsc.yaml
 winget configuration -f .\configurations\install.dsc.yaml
 ```
 
+## Manual Setup
+
+See [MANUAL.md](MANUAL.md)
+
 ## Links
 
 - <https://learn.microsoft.com/en-us/windows/dev-home/setup>
