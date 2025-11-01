@@ -80,13 +80,26 @@ git config --global core.editor "code --wait"
 
 Copy [gist](https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/aa79f0f744d471f251fb9bf091e8e66b9f900d8c/.gitconfig) of git config and manually merge with your existing config using `git config --global --edit`
 
+For the bash version (in WSL), ensure xclip is installed: `sudo apt install xclip`
+
 ```pwsh
-$GitConfigUrl = "https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/aa79f0f744d471f251fb9bf091e8e66b9f900d8c/.gitconfig"
-Invoke-WebRequest -Uri $GitConfigUrl | Select-Object -ExpandProperty Content | Set-Clipboard
+$GIT_CONFIG_URL = "https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/aa79f0f744d471f251fb9bf091e8e66b9f900d8c/.gitconfig"
+Invoke-WebRequest -Uri $GIT_CONFIG_URL | Select-Object -ExpandProperty Content | Set-Clipboard
+```
+
+```bash
+sudo apt -y update && sudo apt install -y xclip
 ```
 
 ```pwsh
 git config --global --edit
+```
+
+```bash
+GIT_CONFIG_URL="https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/aa79f0f744d471f251fb9bf091e8e66b9f900d8c/.gitconfig"
+curl -o /tmp/.gitconfig $GIT_CONFIG_URL
+cat /tmp/.gitconfig | xclip -selection clipboard
+rm /tmp/.gitconfig
 ```
 
 ## Optional (SSH setup)
