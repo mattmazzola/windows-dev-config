@@ -83,7 +83,7 @@ Copy [gist](https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d
 For the bash version (in WSL), ensure xclip is installed: `sudo apt install xclip`
 
 ```pwsh
-$GIT_CONFIG_URL = "https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/aa79f0f744d471f251fb9bf091e8e66b9f900d8c/.gitconfig"
+$GIT_CONFIG_URL = "https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/a39b6851f9610326e3c756fab16520486d4504a2/.gitconfig"
 Invoke-WebRequest -Uri $GIT_CONFIG_URL | Select-Object -ExpandProperty Content | Set-Clipboard
 ```
 
@@ -96,7 +96,7 @@ git config --global --edit
 ```
 
 ```bash
-GIT_CONFIG_URL="https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/aa79f0f744d471f251fb9bf091e8e66b9f900d8c/.gitconfig"
+GIT_CONFIG_URL="https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/a39b6851f9610326e3c756fab16520486d4504a2/.gitconfig"
 curl -o /tmp/.gitconfig $GIT_CONFIG_URL
 cat /tmp/.gitconfig | xclip -selection clipboard
 rm /tmp/.gitconfig
