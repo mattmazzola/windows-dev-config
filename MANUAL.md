@@ -73,12 +73,12 @@ These steps require installation of some applications above
 ### Ensure Git editor is set to code
 
 ```pwsh
-git config --global core.editor "code --wait"
+git config core.editor "code --wait"
 ```
 
 ### Copy Git Config
 
-Copy [gist](https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/d2431e1f672546fb6267e8307c699fb80ef03bc5/.gitconfig) of git config and manually merge with your existing config using `git config --global --edit`
+Copy [gist](https://gist.githubusercontent.com/mattmazzola/7a6350df0a0d27a62137d14572340229/raw/d2431e1f672546fb6267e8307c699fb80ef03bc5/.gitconfig) of git config and manually merge with your existing config using `git config --edit`
 
 For the bash version (in WSL), ensure xclip is installed: `sudo apt install xclip`
 
@@ -92,7 +92,7 @@ sudo apt -y update && sudo apt install -y xclip
 ```
 
 ```pwsh
-git config --global --edit
+git config --edit
 ```
 
 ```bash
