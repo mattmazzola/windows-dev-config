@@ -105,7 +105,7 @@ rm /tmp/.gitconfig
 ## Optional (SSH setup)
 
 ```pwsh
-ssh-keygen -t ed25519
+ssh-keygen -t ed25519 -C "<username|email>"
 
 # Copy public key to clipboard
 cat ~/.ssh/id_ed25519.pub | Set-Clipboard
