@@ -22,26 +22,10 @@ properties:
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install DotNet 8 SDK
-        allowPrerelease: true
-      settings:
-        id: Microsoft.DotNet.SDK.8
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
         description: Install Visual Studio Code
         allowPrerelease: true
       settings:
         id: Microsoft.VisualStudioCode
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Windows Terminal
-        allowPrerelease: true
-      settings:
-        id: Microsoft.WindowsTerminal
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -98,14 +82,6 @@ properties:
         allowPrerelease: true
       settings:
         id: NickeManarin.ScreenToGif
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        description: Install Microsoft Edge
-        allowPrerelease: true
-      settings:
-        id: Microsoft.Edge
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
