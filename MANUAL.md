@@ -15,11 +15,14 @@
 - Install wsl Distribution
 
     ```pwsh
-    wsl --install Ubuntu-22.04
+    wsl --install Ubuntu-24.04
     ```
 
 ### Other
 
+- Add "Sign-in Options"
+  - PIN, Face, Fingerprint
+ 
 - Open application "Phone Link" to initialize installation
 
 ## Configuration
@@ -44,14 +47,19 @@
 
 ```pwsh
 winget install Microsoft.PowerShell
-winget install Git.Git
+winget install Microsoft.PowerToys
 winget install Microsoft.VisualStudioCode
+winget install Git.Git
+winget install GitHub.cli
 winget install JanDeDobbeleer.OhMyPosh
 winget install Docker.DockerDesktop
-winget install GitHub.cli
+```
+
+### Old Optional
+
+```pwsh
 winget install OBSProject.OBSStudio
 winget install NickeManarin.ScreenToGif
-winget install Microsoft.PowerToys
 winget install Logseq.Logseq
 ```
 
@@ -73,7 +81,7 @@ These steps require installation of some applications above
 ### Ensure Git editor is set to code
 
 ```pwsh
-git config core.editor "code --wait"
+git config --global core.editor "code --wait"
 ```
 
 ### Copy Git Config
