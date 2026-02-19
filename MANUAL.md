@@ -51,8 +51,9 @@ winget install Microsoft.PowerToys
 winget install Microsoft.VisualStudioCode
 winget install Git.Git
 winget install GitHub.cli
-winget install JanDeDobbeleer.OhMyPosh
 winget install Docker.DockerDesktop
+winget install JanDeDobbeleer.OhMyPosh
+winget install AntibodySoftware.WizTree
 ```
 
 ### Old Optional
